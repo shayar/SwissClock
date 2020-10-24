@@ -123,7 +123,7 @@ function addUrl(ids) {
     });
     
 
-    newUrl = newUrl + '/?zones=' + zoneUrlId.join(',') + '&timeZone=' + timeZone.join(',');
+    newUrl = '/?zones=' + zoneUrlId.join(',') + '&timeZone=' + timeZone.join(',');
     var queryString = decodeURIComponent(newUrl);
     window.location = queryString;
 }
@@ -148,7 +148,7 @@ function deleteUrl(id, timezone) {
         } else {
             arrUrlId.splice($.inArray(id, arrUrlId), 1);
             arrZonesValue.splice($.inArray(timezone, arrZonesValue), 1);
-            newUrl = newUrl + '?zones=' + arrUrlId.join(',') + '&timeZone=' + arrZonesValue.join(',');
+            newUrl = '?zones=' + arrUrlId.join(',') + '&timeZone=' + arrZonesValue.join(',');
             var queryString = decodeURIComponent(newUrl);
 
             history.pushState({}, null, queryString);
