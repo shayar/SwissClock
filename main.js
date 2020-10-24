@@ -131,7 +131,7 @@ function addUrl(ids) {
 //to delete url
 function deleteUrl(id, timezone) {
 
-    var newUrl = '';
+    var newUrl = window.location.origin + window.location.pathname;
 
     var urlParams = new URLSearchParams(location.search);
     var zoneUrlId = urlParams.getAll('zones');
@@ -148,7 +148,7 @@ function deleteUrl(id, timezone) {
         } else {
             arrUrlId.splice($.inArray(id, arrUrlId), 1);
             arrZonesValue.splice($.inArray(timezone, arrZonesValue), 1);
-            newUrl = '?zones=' + arrUrlId.join(',') + '&timeZone=' + arrZonesValue.join(',');
+            newUrl = newUrl + '?zones=' + arrUrlId.join(',') + '&timeZone=' + arrZonesValue.join(',');
             var queryString = decodeURIComponent(newUrl);
 
             history.pushState({}, null, queryString);
