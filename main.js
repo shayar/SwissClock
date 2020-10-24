@@ -125,7 +125,7 @@ function addUrl(ids) {
 
     newUrl = newUrl + '/?zones=' + zoneUrlId.join(',') + '&timeZone=' + timeZone.join(',');
     var queryString = decodeURIComponent(newUrl);
-    window.location = queryString;
+    window.location.href = queryString;
 }
 
 //to delete url
