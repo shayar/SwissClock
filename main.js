@@ -111,7 +111,7 @@ function comparer(otherArray) {
 //to add url
 function addUrl(ids) {
 
-    var newUrl = '';
+    var newUrl = window.location.host;
 
     var urlParams = new URLSearchParams(location.search);
     var zoneUrlId = urlParams.getAll('zones');
