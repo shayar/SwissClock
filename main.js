@@ -111,7 +111,7 @@ function comparer(otherArray) {
 //to add url
 function addUrl(ids) {
 
-    var newUrl = 'http://' + window.location.host;
+    var newUrl = window.location.host;
 
     var urlParams = new URLSearchParams(location.search);
     var zoneUrlId = urlParams.getAll('zones');
@@ -131,7 +131,7 @@ function addUrl(ids) {
 //to delete url
 function deleteUrl(id, timezone) {
 
-    var newUrl = 'http://' + window.location.host;
+    var newUrl = window.location.host;
 
     var urlParams = new URLSearchParams(location.search);
     var zoneUrlId = urlParams.getAll('zones');
