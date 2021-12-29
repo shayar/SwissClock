@@ -215,6 +215,10 @@ $(document).ready(function () {
             id: "Local-Time",
             timezone: ((dt.getTime() - UTC) / 3600000)
         },
+        turkey: {
+            id: "Turkey",
+            timezone: 3
+        },
         london: {
             id: "London",
             timezone: 0
